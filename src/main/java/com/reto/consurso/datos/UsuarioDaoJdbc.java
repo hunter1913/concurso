@@ -59,6 +59,7 @@ public class UsuarioDaoJdbc implements IUsuarioDao {
             stmt.setString(1, usuario.getNombreUsuario());
             stmt.setInt(2, usuario.getPuntaje());
             stmt.setInt(3, usuario.getRespuestasCorretas());
+            stmt.setInt(4, usuario.getIdUsuario());
             registros = stmt.executeUpdate();
 
         } finally {

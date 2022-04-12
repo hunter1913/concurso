@@ -92,7 +92,6 @@ public class ManejoPreguntasPresentacion {
                     }
                 }
             }
-
             if (opcion == 3) {
                 System.out.println("Ingrese el nombre de usuario");
                 var nombreUsuario = scanner.nextLine();
@@ -100,8 +99,8 @@ public class ManejoPreguntasPresentacion {
                 juego.listarCategoria1();
                 System.out.println("Digite la opcion correcta ");
                 var respuesta = scanner.nextLine();
-                juego.comparaRespuesta(respuesta);
-                
+                juego.comparaRespuesta(respuesta, nombreUsuario);
+                catalogo2.actualizarUsuario(nombreUsuario, opcion, opcion);
             }
         }
     }

@@ -45,7 +45,7 @@ public class CatalogoUsuariosImpl implements ICatalogoUsuarios {
             System.out.println(usuarios);
         }
         conexion.commit();
-        
+
     }
 
     @Override
@@ -60,6 +60,18 @@ public class CatalogoUsuariosImpl implements ICatalogoUsuarios {
         usuarioDao.delete(eliminarpre);
         conexion.commit();
 
+    }
+
+    @Override
+    public void actualizarUsuario(String nombreUsuario, int puntaje, int respuestas_correctas) throws SQLException {
+        Connection conexion = null;
+        conexion = Conexion.getConnection();
+        if (conexion.getAutoCommit()) {
+            conexion.setAutoCommit(false);
+        }
+//        IUsuarioDao usuarioDao = new UsuarioDaoJdbc(conexion);
+//        UsuarioDTO actualizarUsuario = new UsuarioDTO(nombreUsuario, puntaje, respuestas_correctas,);
+//        usuarioDao.update(actualizarUsuario);
     }
 
 }
