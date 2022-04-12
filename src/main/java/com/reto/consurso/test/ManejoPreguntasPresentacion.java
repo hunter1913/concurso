@@ -81,6 +81,7 @@ public class ManejoPreguntasPresentacion {
                         case 2:
                             catalogo2.listarUsuario();
                             break;
+                            
                         case 3:
                             System.out.println("Ingrese el ID usuario a eliminar");
                             var id = Integer.parseInt(scanner.nextLine());
