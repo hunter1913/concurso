@@ -23,7 +23,8 @@ public class JuegoImpl implements IJuego {
         Connection conexion = null;
         conexion = Conexion.getConnection();
         Random rand = new Random();
-        int numero = (int) (Math.random() * 4);
+        
+        int numero = (int) (Math.random() * 25);
         CategoriaDTO resultado = null;
         CategoriaDTO seleccion = null;
         if (conexion.getAutoCommit()) {
@@ -32,12 +33,14 @@ public class JuegoImpl implements IJuego {
         IPreguntaDao preguntaDao = new PreguntaDaoJdbc(conexion);
         List<CategoriaDTO> preguntas = preguntaDao.select();
         List<CategoriaDTO> categorias = preguntaDao.select();
-
-//        System.out.println("Pregunta = " + preguntas.get(numero));
-
+        
+        System.out.println("preguntas = " + preguntas.get(numero));
+//
 //        for (int i = 0; i < numero; i++) {
-//            int nAleatorio = rand.nextInt(preguntas.size());
-//            CategoriaDTO elementoAzar = preguntas.get(nAleatorio);
+//        
+//            CategoriaDTO elementoAzar = preguntas.get(ran);
+//            String pal = 
+//            System.out.println("Pregunta = " + preguntas.get(numero));
 //        }
         conexion.commit();
 

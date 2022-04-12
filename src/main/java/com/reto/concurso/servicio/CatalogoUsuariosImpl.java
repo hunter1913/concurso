@@ -24,11 +24,8 @@ public class CatalogoUsuariosImpl implements ICatalogoUsuarios {
         }
         IUsuarioDao usuarioDao = new UsuarioDaoJdbc();
         UsuarioDTO nuevoUsuario = new UsuarioDTO(usuario);
-
         usuarioDao.insert(nuevoUsuario);
-
         conexion.commit();
-
     }
 
     @Override
@@ -44,7 +41,6 @@ public class CatalogoUsuariosImpl implements ICatalogoUsuarios {
             System.out.println(usuario);
         }
         conexion.commit();
-
     }
 
     @Override
@@ -58,7 +54,6 @@ public class CatalogoUsuariosImpl implements ICatalogoUsuarios {
         UsuarioDTO eliminarpre = new UsuarioDTO(id);
         usuarioDao.delete(eliminarpre);
         conexion.commit();
-
     }
 
     @Override
@@ -68,10 +63,12 @@ public class CatalogoUsuariosImpl implements ICatalogoUsuarios {
         if (conexion.getAutoCommit()) {
             conexion.setAutoCommit(false);
         }
-//        IUsuarioDao usuarioDao = new UsuarioDaoJdbc(conexion);
-//        UsuarioDTO actualizarUsuario = new UsuarioDTO(nombreUsuario, puntaje, respuestas_correctas,);
-//        usuarioDao.update(actualizarUsuario);
-
+        IUsuarioDao usuarioDao = new UsuarioDaoJdbc(conexion);
+        UsuarioDTO nuevoUsuario = new UsuarioDTO(nombreUsuario, puntaje, respuestas_correctas);
+        usuarioDao.update(nuevoUsuario);
+        
+        
+        
         conexion.commit();
     }
 
