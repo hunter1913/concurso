@@ -34,7 +34,7 @@ public class JuegoImpl implements IJuego {
         List<CategoriaDTO> preguntas = preguntaDao.select();
         List<CategoriaDTO> categorias = preguntaDao.select();
         
-        System.out.println("preguntas = " + preguntas.get(numero));
+  //      System.out.println("preguntas = " + preguntas.get(numero));
 //
 //        for (int i = 0; i < numero; i++) {
 //        
