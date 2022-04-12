@@ -66,7 +66,7 @@ public class UsuarioDTO {
 
     @Override
     public String toString() {
-        return "idUsuario=" + idUsuario +"/n"+ ", nombreUsuario=" + nombreUsuario + "/n"+ ", puntaje=" + puntaje + "/n"+ ", respuestasCorretas=" + respuestasCorretas ;
+        return "idUsuario: " + idUsuario + " Nombre Usuario: " + nombreUsuario +  " Puntaje: " + puntaje +  " Respuestas Correctas:" + respuestasCorretas + "\n";
     }
     
     
