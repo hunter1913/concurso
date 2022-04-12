@@ -100,9 +100,6 @@ public class ManejoPreguntasPresentacion {
                 juego.listarCategoria1();
                 System.out.println("Digite la opcion correcta "+"\n");
                 var respuesta = scanner.nextLine();
-                
-                
-                
             }
         }
     }
