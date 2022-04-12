@@ -42,7 +42,6 @@ CREATE TABLE `preguntas` (
 
 LOCK TABLES `preguntas` WRITE;
 /*!40000 ALTER TABLE `preguntas` DISABLE KEYS */;
-INSERT INTO `preguntas` VALUES (26,1,'¿ Nueva Pregunta ?','eqrt','asdf','asdf','qewr','B',NULL),(27,1,'oTRA','ADF','AFD','ASDF','ASDF','f',NULL),(28,1,'xxx','sgfg','sb','sdfg','adf','C',NULL),(29,1,'SDFG','SDG','SDG','SDG','SDG','G',NULL),(34,1,'ESTA ES','ASDF','SADF','SADF','SADF','d',NULL),(35,4,'nUEVA','ASDF','ASDF','SADF','SDF','c',NULL);
 /*!40000 ALTER TABLE `preguntas` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-12  3:24:06
+-- Dump completed on 2022-04-12  7:07:35
