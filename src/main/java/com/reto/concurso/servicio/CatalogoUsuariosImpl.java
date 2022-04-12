@@ -40,9 +40,8 @@ public class CatalogoUsuariosImpl implements ICatalogoUsuarios {
         }
         IUsuarioDao usuarioDao = new UsuarioDaoJdbc(conexion);
         List<UsuarioDTO> usuarios = usuarioDao.select();
-
         for (UsuarioDTO usuario : usuarios) {
-            System.out.println(usuarios);
+            System.out.println(usuario);
         }
         conexion.commit();
 
@@ -72,6 +71,8 @@ public class CatalogoUsuariosImpl implements ICatalogoUsuarios {
 //        IUsuarioDao usuarioDao = new UsuarioDaoJdbc(conexion);
 //        UsuarioDTO actualizarUsuario = new UsuarioDTO(nombreUsuario, puntaje, respuestas_correctas,);
 //        usuarioDao.update(actualizarUsuario);
+
+        conexion.commit();
     }
 
 }

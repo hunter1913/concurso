@@ -113,11 +113,9 @@ public class UsuarioDaoJdbc implements IUsuarioDao {
             String nombreUsuario = rs.getString("nombre_usuario");
             int puntaje = rs.getInt("puntaje");
             int respuestasCorrectas = rs.getInt("respuestas_correctas");
-
             usuario = new UsuarioDTO(idUsuario, nombreUsuario, puntaje, respuestasCorrectas);
             usuarios.add(usuario);
         }
-
         close(rs);
         Conexion.close(stmt);
         if (this.conexionTransacional == null) {
