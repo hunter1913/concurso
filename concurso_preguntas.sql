@@ -16,29 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `usuario`
+-- Table structure for table `preguntas`
 --
 
-DROP TABLE IF EXISTS `usuario`;
+DROP TABLE IF EXISTS `preguntas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `usuario` (
-  `id_usuario` int NOT NULL AUTO_INCREMENT,
-  `nombre_usuario` varchar(45) DEFAULT NULL,
-  `puntaje` int DEFAULT NULL,
-  `respuestas_correctas` int DEFAULT NULL,
-  PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `preguntas` (
+  `id_pregunta` int NOT NULL AUTO_INCREMENT,
+  `categoria` int DEFAULT NULL,
+  `pregunta` varchar(45) DEFAULT NULL,
+  `respuesta1` varchar(45) DEFAULT NULL,
+  `respuesta2` varchar(45) DEFAULT NULL,
+  `respuesta3` varchar(45) DEFAULT NULL,
+  `respuesta4` varchar(45) DEFAULT NULL,
+  `rcorrecta` varchar(45) DEFAULT NULL,
+  `contador_categoria1` int DEFAULT NULL,
+  PRIMARY KEY (`id_pregunta`)
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `usuario`
+-- Dumping data for table `preguntas`
 --
 
-LOCK TABLES `usuario` WRITE;
-/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (21,'andres.villada',NULL,NULL);
-/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
+LOCK TABLES `preguntas` WRITE;
+/*!40000 ALTER TABLE `preguntas` DISABLE KEYS */;
+/*!40000 ALTER TABLE `preguntas` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
