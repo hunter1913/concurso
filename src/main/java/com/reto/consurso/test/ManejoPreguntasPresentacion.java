@@ -105,7 +105,7 @@ public class ManejoPreguntasPresentacion {
                 System.out.println("Digite la opcion correcta ");
                 var respuesta = scanner.nextLine();
                 juego.comparaRespuesta(respuesta, nombreUsuario);
-                //catalogo2.actualizarUsuario(nombreUsuario, opcion, opcion);
+                catalogo2.actualizarUsuario(nombreUsuario, opcion, opcion);
             }
         }
     }
