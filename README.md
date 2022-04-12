@@ -10,4 +10,6 @@ Adicional se debe cambiar el usuario y la contraseña en la clase Conexion:
 *   private static final String JDBC_PASSWORD = "admin";
 Establece el usuario y la contraseña de Mysql en las anteriores lienas.
 
+Para ejecutar el programa, se debe correr el archivo ManejoPreguntasPresentacion que esta alojado en la siguiente ruta concurso/src/main/java/com/reto/consurso/test/
+
 Este es unproyecto desarrollado en netbeans
