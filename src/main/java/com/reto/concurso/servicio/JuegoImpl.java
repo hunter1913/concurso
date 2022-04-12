@@ -22,6 +22,9 @@ public class JuegoImpl implements IJuego {
     public void listarCategoria1() throws SQLException {
         Connection conexion = null;
         conexion = Conexion.getConnection();
+        Random rand = new Random();
+        int numero = (int) (Math.random() * 4);
+        CategoriaDTO resultado = null;
         CategoriaDTO seleccion = null;
         if (conexion.getAutoCommit()) {
             conexion.setAutoCommit(false);
@@ -30,14 +33,12 @@ public class JuegoImpl implements IJuego {
         List<CategoriaDTO> preguntas = preguntaDao.select();
         List<CategoriaDTO> categorias = preguntaDao.select();
 
-        for (CategoriaDTO pregunta : preguntas) {
-            if (pregunta.getCategoria() == 1) {
-                seleccion = pregunta;
-                respuesta2 = pregunta.getRespuestaCorrecta();
-            }
-        }
-        //idPregunta = seleccion.getIdPregunta();
-        System.out.println("Pregunta = " + seleccion);
+//        System.out.println("Pregunta = " + preguntas.get(numero));
+
+//        for (int i = 0; i < numero; i++) {
+//            int nAleatorio = rand.nextInt(preguntas.size());
+//            CategoriaDTO elementoAzar = preguntas.get(nAleatorio);
+//        }
         conexion.commit();
 
     }
@@ -50,7 +51,7 @@ public class JuegoImpl implements IJuego {
             System.out.println("Ganaste 10 puntos: ");
             acomuladorPuntos = acomuladorPuntos + 10;
             acomuladorRespuestas++;
-            //catalogo2.actualizarUsuario(nombreUsuario, idPregunta, acomuladorPuntos);
+            catalogo2.actualizarUsuario(nombreUsuario, idPregunta, acomuladorPuntos);
         }
     }
 
