@@ -1,6 +1,6 @@
-package datos;
+package com.reto.consurso.datos;
 
-import dominio.*;
+import com.reto.consurso.dominio.UsuarioDTO;
 import java.sql.*;
 import java.util.*;
 

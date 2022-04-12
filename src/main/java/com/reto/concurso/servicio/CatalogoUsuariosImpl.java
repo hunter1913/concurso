@@ -1,7 +1,9 @@
 package com.reto.concurso.servicio;
 
-import datos.*;
-import dominio.*;
+import com.reto.consurso.dominio.UsuarioDTO;
+import com.reto.consurso.datos.IUsuarioDao;
+import com.reto.consurso.datos.Conexion;
+import com.reto.consurso.datos.UsuarioDaoJdbc;
 import java.sql.*;
 import java.util.*;
 

@@ -1,8 +1,8 @@
-package datos;
+package com.reto.consurso.datos;
 
-import static datos.Conexion.close;
-import dominio.CategoriaDTO;
-import dominio.UsuarioDTO;
+import static com.reto.consurso.datos.Conexion.close;
+import com.reto.consurso.dominio.CategoriaDTO;
+import com.reto.consurso.dominio.UsuarioDTO;
 import java.sql.*;
 import java.sql.SQLException;
 import java.util.*;

@@ -1,4 +1,4 @@
-package dominio;
+package com.reto.consurso.dominio;
 
 public class PreguntaDTO {
 

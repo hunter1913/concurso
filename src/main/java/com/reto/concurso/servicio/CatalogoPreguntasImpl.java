@@ -1,7 +1,10 @@
 package com.reto.concurso.servicio;
 
-import datos.*;
-import dominio.*;
+import com.reto.consurso.dominio.PreguntaDTO;
+import com.reto.consurso.dominio.CategoriaDTO;
+import com.reto.consurso.datos.PreguntaDaoJdbc;
+import com.reto.consurso.datos.IPreguntaDao;
+import com.reto.consurso.datos.Conexion;
 import java.sql.*;
 import java.sql.SQLException;
 import java.util.*;

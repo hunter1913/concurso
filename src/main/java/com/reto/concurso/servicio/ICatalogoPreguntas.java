@@ -1,6 +1,5 @@
 package com.reto.concurso.servicio;
 
-import dominio.*;
 import java.sql.*;
 
 public interface ICatalogoPreguntas {

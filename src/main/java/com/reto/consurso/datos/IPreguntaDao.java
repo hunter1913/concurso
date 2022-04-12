@@ -1,7 +1,8 @@
 
-package datos;
+package com.reto.consurso.datos;
 
-import dominio.*;
+import com.reto.consurso.dominio.PreguntaDTO;
+import com.reto.consurso.dominio.CategoriaDTO;
 import java.sql.SQLException;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package datos;
+package com.reto.consurso.datos;
 
 import java.sql.*;
 import javax.sql.DataSource;

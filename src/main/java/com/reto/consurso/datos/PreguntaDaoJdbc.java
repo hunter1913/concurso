@@ -1,7 +1,8 @@
-package datos;
+package com.reto.consurso.datos;
 
-import static datos.Conexion.close;
-import dominio.*;
+import com.reto.consurso.dominio.PreguntaDTO;
+import com.reto.consurso.dominio.CategoriaDTO;
+import static com.reto.consurso.datos.Conexion.close;
 import java.sql.*;
 import java.util.*;
 

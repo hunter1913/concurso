@@ -1,4 +1,4 @@
-package test;
+package com.reto.consurso.test;
 
 import com.reto.concurso.servicio.*;
 import java.sql.SQLException;
