@@ -98,8 +98,10 @@ public class ManejoPreguntasPresentacion {
                 var nombreUsuario = scanner.nextLine();
                 catalogo2.agregarUsuario(nombreUsuario);
                 juego.listarCategoria1();
-                System.out.println("Digite la opcion correcta "+"\n");
+                System.out.println("Digite la opcion correcta ");
                 var respuesta = scanner.nextLine();
+                juego.comparaRespuesta(respuesta);
+                
             }
         }
     }

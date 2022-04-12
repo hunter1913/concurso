@@ -10,6 +10,8 @@ import java.util.*;
 public class JuegoImpl implements IJuego {
 
     private final IPreguntaDao datos;
+    private int idPregunta;
+    private String respuesta2;
 
     public JuegoImpl() {
         this.datos = new PreguntaDaoJdbc();
@@ -29,14 +31,26 @@ public class JuegoImpl implements IJuego {
         List<CategoriaDTO> categorias = preguntaDao.select();
 
         for (CategoriaDTO pregunta : preguntas) {
-            if(pregunta.getCategoria()==1)
+            if (pregunta.getCategoria() == 1) {
                 seleccion = pregunta;
+                respuesta2 = pregunta.getRespuestaCorrecta();
+            }
+            
         }
         System.out.println("Pregunta = " + seleccion);
+        idPregunta = seleccion.getIdPregunta();
         
-
+        
         conexion.commit();
 
+    }
+
+    @Override
+    public void comparaRespuesta(String respuesta) throws SQLException {
+        if(respuesta.equals(respuesta2)  ){
+            System.out.println("Ganaste 10 puntos: ");
+            
+        }
     }
 
 }
