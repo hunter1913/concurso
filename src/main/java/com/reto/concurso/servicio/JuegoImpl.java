@@ -36,22 +36,22 @@ public class JuegoImpl implements IJuego {
                 respuesta2 = pregunta.getRespuestaCorrecta();
             }
         }
+        //idPregunta = seleccion.getIdPregunta();
         System.out.println("Pregunta = " + seleccion);
-        idPregunta = seleccion.getIdPregunta();
         conexion.commit();
 
     }
 
     @Override
     public void comparaRespuesta(String respuesta, String nombreUsuario) throws SQLException {
-        int acomuladorPuntos= 0;
-        int acomuladorRespuestas=0;
-        if(respuesta.equals(respuesta2)  ){
+        int acomuladorPuntos = 0;
+        int acomuladorRespuestas = 0;
+        if (respuesta.equals(respuesta2)) {
             System.out.println("Ganaste 10 puntos: ");
-            acomuladorPuntos=acomuladorPuntos+10;
+            acomuladorPuntos = acomuladorPuntos + 10;
             acomuladorRespuestas++;
-            catalogo2.actualizarUsuario(nombreUsuario, idPregunta, acomuladorPuntos);
+            //catalogo2.actualizarUsuario(nombreUsuario, idPregunta, acomuladorPuntos);
         }
     }
-    
+
 }

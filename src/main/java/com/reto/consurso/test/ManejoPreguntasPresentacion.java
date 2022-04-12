@@ -93,10 +93,6 @@ public class ManejoPreguntasPresentacion {
                     }
                 }
             }
-            
-            
-            
-            
             if (opcion == 3) {
                 System.out.println("Ingrese el nombre de usuario");
                 var nombreUsuario = scanner.nextLine();
