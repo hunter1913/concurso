@@ -1,2 +1,2 @@
 # concurso
-Abrir el baranched concurso ahi se enceuntra el reto
+Abrir el baranched concurso ahi se encuentra el reto
